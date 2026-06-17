@@ -1,5 +1,5 @@
 [build]
-  command = "npm install -g mystmd@~1.9.0 && myst --version && myst build --html"
+  command = "npm install -g mystmd@~1.10.1 && myst --version && myst build --html"
   publish = "_build/html"
 
 [build.environment]
@@ -77,4 +77,3 @@
   to = "https://earthscope-seedlink-export-docs.netlify.app/service/seedlink/:splat"
   status = 200
   force = true
-

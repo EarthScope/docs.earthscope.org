@@ -18,12 +18,12 @@ site:
     internal_domains: docs.earthscope.org
     hide_search: true
   parts:
-    # Points at CloudDocs's own `main` branch, not a local path, so this
+    # Points at repos's own `main` branch, not a local path, so this
     # resolves the same way for every project extending this file. See
     # "Local dev on the search widget" in CloudDocs/README.md before editing
     # es_config/search-widget.mjs — this line will NOT pick up local changes.
-    navbar_end: https://raw.githubusercontent.com/EarthScope/CloudDocs/main/es_config/navbar_end_external.md
-    # for local dev of CloudDocs, comment the line above and uncomment the line below
+    navbar_end: https://raw.githubusercontent.com/EarthScope/docs.earthscope.org/main/es_config/navbar_end_external.md
+    # for local dev of this repo, comment the line above and uncomment the line below
     # navbar_end: es_config/navbar_end.md
 
 

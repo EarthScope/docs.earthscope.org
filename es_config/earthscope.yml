@@ -20,7 +20,7 @@ site:
   parts:
     # Points at repos's own `main` branch, not a local path, so this
     # resolves the same way for every project extending this file. See
-    # "Local dev on the search widget" in CloudDocs/README.md before editing
+    # "Local dev on the search widget" in README.md before editing
     # es_config/search-widget.mjs — this line will NOT pick up local changes.
     navbar_end: https://raw.githubusercontent.com/EarthScope/docs.earthscope.org/main/es_config/navbar_end_external.md
     # for local dev of this repo, comment the line above and uncomment the line below

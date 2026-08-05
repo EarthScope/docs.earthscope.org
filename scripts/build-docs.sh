@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Centralized build script for EarthScope docs.
-# This script can be loaded and executed directly from the CloudDocs repository:
-#   curl -sSfL https://raw.githubusercontent.com/EarthScope/CloudDocs/main/scripts/build-docs.sh | bash
+# This script can be loaded and executed directly from the docs.earthscope.org repository:
+#   curl -sSfL https://raw.githubusercontent.com/EarthScope/docs.earthscope.org/main/scripts/build-docs.sh | bash
 #
 # It allows updating the mystmd version and build steps in one central place.
 

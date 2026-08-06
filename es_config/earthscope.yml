@@ -41,7 +41,7 @@ site:
         - title: NTrip
           url: https://www.earthscope.org/data/gnss-realtime/
         - title: GeoLab JupyterHub
-          url: /service/geolab
+          url: /geolab
     - title: Software
       children:
         - title: CLI

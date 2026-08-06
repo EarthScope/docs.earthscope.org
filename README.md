@@ -82,6 +82,6 @@ the last build, it POSTs to each subsite's Netlify build hook.
 
 Hook URLs are read from build-scoped environment variables, one per subsite,
 named `SUBSITE_HOOK_<NAME>` (for example `SUBSITE_HOOK_GEOLAB`). Set them under
-Site configuration → Environment variables, and mark them secret. With none
+Project configuration → Environment variables, and mark them secret. With none
 set, the plugin does nothing. Setting `DRY_RUN` to any non-empty value logs
 which subsites would be triggered without firing the hooks.

@@ -30,11 +30,23 @@ site:
   nav:
     - title: Docs Home
       url: https://docs.earthscope.org
+    - title: Services
+      children:
+        - title: SeedLink
+          url: /service/seedlink
+        - title: NTrip
+          url: https://www.earthscope.org/data/gnss-realtime/
+        - title: API
+          url: /api
+        - title: Web Services
+          url: https://service.earthscope.org/
+        - title: GeoLab JupyterHub
+          url: /service/geolab
+    - title: Software
+      children:
+        - title: CLI
+          url: /cli
+        - title: SDK
+          url: /sdk
     - title: GeoLab
-      url: https://docs.earthscope.org/geolab
-    - title: CLI
-      url: https://docs.earthscope.org/cli
-    - title: API
-      url: https://docs.earthscope.org/api
-    - title: SDK
-      url: https://docs.earthscope.org/sdk
+      url: /geolab

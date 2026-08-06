@@ -1,12 +1,10 @@
-# Welcome to EarthScope's Cloud Data and Developer Documentation Center!
+# Welcome to EarthScope's Technical Documentation Center!
 
-```{note}
-This [JupyterBook](https://jupyterbook.org/en/stable/intro.html) is in development as we configure our cloud documentation center.
-```
+This site documents the tools and services for working with data from the
+NSF National Geophysical Facility operated by EarthScope.
 
- The NSF National Geophysical Facility operated by EarthScope Consortium is migrating to the cloud!
- With this transition, users have access to new cloud computing capabilities for their own work. Here you can explore documentation for using our Cloud Data tools and services.
+Use the navigation bar above to browse documentation for each tool. If you're
+just getting started, set up an [EarthScope User Account](./user_account.md)
+first — it's required for GeoLab and for authenticated API/CLI/SDK access.
 
- The navigation bar across the top links to documentation for EarthScope-operated cloud services. Fundamentals for account creation and getting started are on the left sidebar.
-
-Learn more about EarthScope's Cloud Migration by visiting https://www.earthscope.org/data/cloud/ or by contacting us at: help@earthscope.org
+Questions or issues? Contact help@earthscope.org.

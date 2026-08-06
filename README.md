@@ -20,6 +20,8 @@ tools (Services, Data, GeoLab), which live in their own repositories.
   merges in URLs from the other projects listed in `netlify.toml`.
 - `netlify.toml` — Netlify build settings and the redirects that stitch the
   other EarthScope docs sites under `docs.earthscope.org/<path>`.
+- `plugins/fanout/` — local Netlify build plugin that rebuilds the other
+  EarthScope docs sites when the files they share with this repo change.
 
 ## Local testing
 
@@ -69,3 +71,17 @@ Netlify builds this repo (and the other EarthScope docs repos) by running
 `myst build --html`, and — for the root project only — runs
 `scripts/fix-sitemap.mjs`. See `netlify.toml` for build settings and
 redirects.
+
+### Propagating shared config to the other docs sites
+
+The other repos pull `es_config/` over `raw.githubusercontent.com` and `curl`
+`scripts/build-docs.sh` during their own builds, so changing either one here
+leaves them stale until they rebuild. The `plugins/fanout` build plugin closes
+that gap: after a successful production deploy, if either path changed since
+the last build, it POSTs to each subsite's Netlify build hook.
+
+Hook URLs are read from build-scoped environment variables, one per subsite,
+named `SUBSITE_HOOK_<NAME>` (for example `SUBSITE_HOOK_GEOLAB`). Set them under
+Site configuration → Environment variables, and mark them secret. With none
+set, the plugin does nothing. Setting `DRY_RUN` to any non-empty value logs
+which subsites would be triggered without firing the hooks.

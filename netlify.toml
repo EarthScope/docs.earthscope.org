@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "24"
 
+# A local Netlify plugin that triggers rebuilds of the subsites when the shared config changes.
+[[plugins]]
+  package = "/plugins/fanout"
+
 # Legacy GeoLab paths (old Read the Docs–style URLs) -> new /geolab/* layout
 # The old site nested everything under /content/; the new layout drops that segment.
 [[redirects]]

@@ -32,14 +32,14 @@ site:
       url: https://docs.earthscope.org
     - title: Services
       children:
-        - title: SeedLink
-          url: /service/seedlink
-        - title: NTrip
-          url: https://www.earthscope.org/data/gnss-realtime/
         - title: API
           url: /api
         - title: Web Services
           url: https://service.earthscope.org/
+        - title: SeedLink
+          url: /service/seedlink
+        - title: NTrip
+          url: https://www.earthscope.org/data/gnss-realtime/
         - title: GeoLab JupyterHub
           url: /service/geolab
     - title: Software

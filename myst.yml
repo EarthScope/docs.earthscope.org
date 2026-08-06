@@ -9,21 +9,10 @@ project:
   toc:
     - file: intro.md
     # - title: Getting Started
-    #   children:
+    #   url: /getting-started.md
     - file: user_account.md
     - file: citation.md
-    # - title: EarthScope Cloud Resources
+    # - title: A folder example
     #   children:
-    #     - url: https://docs.earthscope.org/projects/GeoLab
-    #       title: GeoLab
-    #     - url: https://docs.earthscope.org/projects/API
-    #       title: EarthScope API
-    #     - url: https://docs.earthscope.org/projects/CLI
-    #       title: EarthScope CLI
-    #     - url: https://docs.earthscope.org/projects/SDK
-    #       title: EarthScope SDK
-# site:
-#   options:
-#     logo: es_config/logos/cloud_logo_simple_small.png
-#     folders: true
-#   template: book-theme
+    #     - title: Getting started advanced
+    #       url: /getting-started-advanced.md

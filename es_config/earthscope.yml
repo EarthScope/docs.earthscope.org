@@ -27,26 +27,31 @@ site:
     # navbar_end: es_config/navbar_end.md
 
 
+  # Subsites build with their own BASE_URL (see scripts/build-docs.sh), which
+  # MyST prepends to any nav url that isn't fully qualified — a root-relative
+  # url like /geolab would render as /geolab/geolab on the GeoLab subsite.
+  # All nav urls must therefore be fully qualified against docs.earthscope.org.
+  # internal_domains above keeps these same-tab with no external-link icon.
   nav:
     - title: Docs Home
       url: https://docs.earthscope.org
     - title: Services
       children:
         - title: API
-          url: /api
+          url: https://docs.earthscope.org/api
         - title: Web Services
           url: https://service.earthscope.org/
         - title: SeedLink
-          url: /service/seedlink
+          url: https://docs.earthscope.org/service/seedlink
         - title: NTrip
           url: https://www.earthscope.org/data/gnss-realtime/
         - title: GeoLab JupyterHub
-          url: /geolab
+          url: https://docs.earthscope.org/geolab
     - title: Software
       children:
         - title: CLI
-          url: /cli
+          url: https://docs.earthscope.org/cli
         - title: SDK
-          url: /sdk
+          url: https://docs.earthscope.org/sdk
     - title: GeoLab
-      url: /geolab
+      url: https://docs.earthscope.org/geolab

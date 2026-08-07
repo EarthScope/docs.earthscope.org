@@ -11,6 +11,9 @@ project:
     # - title: Getting Started
     #   url: /getting-started.md
     - file: user_account.md
+    - title: Open Data on AWS
+      url: https://docs.earthscope.org/sponsored-open-data
+
     # - title: A folder example
     #   children:
     #     - title: Getting started advanced

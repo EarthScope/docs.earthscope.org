@@ -81,3 +81,17 @@
   to = "https://earthscope-seedlink-export-docs.netlify.app/service/seedlink/:splat"
   status = 200
   force = true
+
+# /sponsored-open-data
+[[redirects]]
+  from = "/sponsored-open-data"
+  to = "https://earthscope-sponsored-open-data.netlify.app/sponsored-open-data"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sponsored-open-data/*"
+  to = "https://earthscope-sponsored-open-data.netlify.app/sponsored-open-data/:splat"
+  status = 200
+  force = true
+

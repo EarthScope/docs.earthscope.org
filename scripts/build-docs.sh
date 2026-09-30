@@ -8,7 +8,7 @@
 set -e
 
 # Default mystmd version if not specified in the environment
-DEFAULT_MYSTMD_VERSION="~1.10.1"
+DEFAULT_MYSTMD_VERSION="~1.11.0"
 MYSTMD_VERSION="${MYSTMD_VERSION:-$DEFAULT_MYSTMD_VERSION}"
 
 echo "=== EarthScope Docs Central Builder ==="

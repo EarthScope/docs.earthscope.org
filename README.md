@@ -80,6 +80,14 @@ leaves them stale until they rebuild. The `plugins/fanout` build plugin closes
 that gap: after a successful production deploy, if either path changed since
 the last build, it POSTs to each subsite's Netlify build hook.
 
+The baseline is the last successful production deploy, looked up through the
+Netlify API with the build's own token, so no extra variable is needed. This
+holds up for multi-commit pushes, failed builds in between, and builds without
+a cache. If the lookup fails, the plugin falls back to the build cache, or to
+the built commit's parent when there is no cache (which can miss an earlier
+commit in a multi-commit push); the build log says which baseline was used. If
+the git comparison itself fails, the plugin triggers anyway.
+
 Hook URLs are read from build-scoped environment variables, one per subsite,
 named `SUBSITE_HOOK_<NAME>` (for example `SUBSITE_HOOK_GEOLAB`). Set them under
 Project configuration → Environment variables, and mark them secret. With none

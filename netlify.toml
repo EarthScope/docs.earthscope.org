@@ -95,3 +95,16 @@
   status = 200
   force = true
 
+# /user-limits
+[[redirects]]
+  from = "/user-limits"
+  to = "https://earthscope-user-limits.netlify.app/user-limits"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/user-limits/*"
+  to = "https://earthscope-user-limits.netlify.app/user-limits/:splat"
+  status = 200
+  force = true
+

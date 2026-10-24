@@ -1,20 +1,8 @@
 version: 1
 extends:
   - ./es_config/earthscope.yml
+  - ./es_config/topleveltoc.yml
 project:
-  title: EarthScope Cloud Documentation Center
+  title: EarthScope Technical Documentation Center
   copyright: '2024-2026'
-  github: EarthScope/CloudDocs
-
-  toc:
-    - file: intro.md
-    # - title: Getting Started
-    #   url: /getting-started.md
-    - file: user_account.md
-    - title: Open Data on AWS
-      url: https://docs.earthscope.org/sponsored-open-data
-
-    # - title: A folder example
-    #   children:
-    #     - title: Getting started advanced
-    #       url: /getting-started-advanced.md
+  github: EarthScope/docs.earthscope.org

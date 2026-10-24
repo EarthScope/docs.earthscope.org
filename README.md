@@ -7,10 +7,13 @@ tools (Services, Data, GeoLab), which live in their own repositories.
 
 ## Repo layout
 
-- `intro.md`, `user_account.md`, `citation.md` — page content for this site.
-- `myst.yml` — project config (title, table of contents).
+- `index.md`, `user_account.md`, `citation.md` — page content for this site.
+- `myst.yml` — project config (title, copyright, extended shared configs).
 - `es_config/earthscope.yml` — shared MyST config (theme, nav bar, logos)
   extended by this and other EarthScope docs repos.
+- `es_config/topleveltoc.yml` — shared top-level table of contents, extended
+  by this repo and by other top-level repos that opt in (see "Shared
+  top-level ToC" below).
 - `es_config/search-widget.mjs` — custom search button/modal backed by a
   Google Programmable Search Engine.
 - `scripts/build-docs.sh` — central build script, also fetched and run
@@ -31,7 +34,7 @@ Install [mystmd](https://mystmd.org/) (pinned version comes from
 `scripts/build-docs.sh`):
 
 ```bash
-npm install -g mystmd@~1.10.1
+npm install -g mystmd@~1.11.0
 ```
 
 Start a live-reloading local server:
@@ -54,6 +57,33 @@ node scripts/fix-sitemap.mjs
 Output goes to `_build/html`. Note that `fix-sitemap.mjs` fetches the
 sitemap/robots.txt of every other project referenced in `netlify.toml`, so it
 requires network access and those sites to be reachable.
+
+### Shared top-level ToC
+
+`es_config/topleveltoc.yml` holds a fixed `project.toc` (`index.md`,
+`user_account.md` (hidden), then links to User Account and Open Data on AWS).
+This repo extends it by local path; another top-level repo opts in by extending
+it by URL, after `earthscope.yml`:
+
+```yaml
+extends:
+  - https://raw.githubusercontent.com/EarthScope/docs.earthscope.org/main/es_config/earthscope.yml
+  - https://raw.githubusercontent.com/EarthScope/docs.earthscope.org/main/es_config/topleveltoc.yml
+```
+
+Sub-sites (CLI, SDK, GeoLab, ...) don't extend it and keep their own ToC.
+Rules for a repo that opts in:
+
+- It must not define `project.toc`: MyST uses an extended ToC only when the
+  site has none, and does not merge them.
+- It must have an `index.md`; the first ToC entry has to be a file.
+- `file:` paths resolve against the repo doing the build, so
+  `user_account.md` is missing there. MyST logs an error-level warning for it
+  (the build still succeeds) and leaves the entry out. That file entry is
+  `hidden`; the sidebar link comes from the separate `url:` entry for User
+  Account, which works in every repo.
+- Only files listed in the ToC are built, so any other page in that repo is
+  not part of its site.
 
 ### Local dev on the search widget
 

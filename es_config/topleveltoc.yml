@@ -8,6 +8,7 @@
 # visible `url:` entry that every site shows as the sidebar link.
 version: 1
 project:
+  title: Technical Documentation
   toc:
     - file: index.md
     - file: user_account.md

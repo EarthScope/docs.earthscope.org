@@ -3,6 +3,5 @@ extends:
   - ./es_config/earthscope.yml
   - ./es_config/topleveltoc.yml
 project:
-  title: EarthScope Technical Documentation Center
   copyright: '2024-2026'
   github: EarthScope/docs.earthscope.org

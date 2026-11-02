@@ -54,4 +54,6 @@ site:
         - title: SDK
           url: https://docs.earthscope.org/sdk
     - title: GeoLab
-      url: https://docs.earthscope.org/geolab
+      children:
+        - title: Documentation
+          url: https://docs.earthscope.org/geolab

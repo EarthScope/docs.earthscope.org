@@ -23,19 +23,6 @@
   status = 301
   force = true
 
-# /geolab
-[[redirects]]
-  from = "/geolab"
-  to = "https://earthscope-geolab-docs.netlify.app/geolab"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/geolab/*"
-  to = "https://earthscope-geolab-docs.netlify.app/geolab/:splat"
-  status = 200
-  force = true
-
 # /geolab/library
 [[redirects]]
   from = "/geolab/library"
@@ -46,6 +33,19 @@
 [[redirects]]
   from = "/geolab/library/*"
   to = "https://geolab-library.netlify.app/geolab/library/:splat"
+  status = 200
+  force = true
+
+# /geolab
+[[redirects]]
+  from = "/geolab"
+  to = "https://earthscope-geolab-docs.netlify.app/geolab"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/geolab/*"
+  to = "https://earthscope-geolab-docs.netlify.app/geolab/:splat"
   status = 200
   force = true
 

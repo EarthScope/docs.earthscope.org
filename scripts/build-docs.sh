@@ -23,7 +23,7 @@ echo "=== MyST MD Version ==="
 myst --version
 
 echo "=== Building documentation ==="
-myst build --html
+myst build --html --check-links
 
 # Check if BASE_URL is set (indicates a sub-project build)
 if [ -n "$BASE_URL" ] && [ "$BASE_URL" != "/" ]; then

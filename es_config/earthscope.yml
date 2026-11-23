@@ -57,3 +57,5 @@ site:
       children:
         - title: Documentation
           url: https://docs.earthscope.org/geolab
+        - title: Library
+          url: https://docs.earthscope.org/geolab/library
